@@ -1,3 +1,8 @@
+
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
 * {
   // border: 2px solid cyan;
 }
@@ -7,7 +12,7 @@ body {
   text-align: center;
   position: relative;
   line-height: 1.7;
-  color: #595959;
+  color: $charcoal;
   margin: 0;
   padding: 0;
 }
@@ -27,11 +32,12 @@ body {
 #header-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 #logo-container {
   #logo {
-    height: 28vh;
+    height: 25vh;
     margin: 25px 0 20px;
   }
 }
@@ -39,26 +45,73 @@ body {
 
 #nav-container {
   text-align: right;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    @include header-font;
+    font-size: 15.5px;
+    padding: 12px;
+
+    &:hover {
+      border-bottom: 5px solid lightgray;
+      transition: 0.3s;
+    }
+  }
+
+  nav {
+    padding-top: 20px;
+  }
 }
 
 #nav-top {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: nowrap;
+  margin-top: 20px;
 
   .icon {
     color: white;
     background-color: black;
-    height: 35px;
-    width: 35px;
+    height: 36px;
+    width: 36px;
     line-height: 35px;
     text-align: center;
     border-radius: 100%;
+    margin: 3px;
     cursor: pointer;
 
     &:hover {
       opacity: 0.5;
       transition: 0.3s;
     }
+  }
+
+  input {
+    height: $input-height;
+    // width: calc(100% - 44px);
+    margin-left: 20px;
+    padding: 0 12px;
+    color: $light-gray;
+    font-family: inherit;
+    font-style: italic;
+    font-size: 13px;
+    border: 1px solid $lighter-gray;
+    border-right: none;
+    vertical-align: middle;
+    border-right-style: none;
+    border-right-width: medium;
+  }
+
+  button {
+    height: $input-height;
+    padding-left: 0;
+    background-color: inherit;
+    border: 1px solid $lighter-gray;
+    border-left: none;
+    cursor: pointer;
   }
 }
 
@@ -125,7 +178,6 @@ body {
 
 #sidebar {
   width: 300px;
-  // margin-left: 20px;
   white-space: normal;
   padding: 0 20px;
 
@@ -135,5 +187,13 @@ body {
 
   img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  #main-inner {
+    flex-direction: column;
+    align-items: center;
   }
 }
