@@ -6,6 +6,8 @@ body {
   font-family: Georgia,times new roman,Times,serif;
   text-align: center;
   position: relative;
+  line-height: 1.7;
+  color: #595959;
   margin: 0;
   padding: 0;
 }
@@ -82,4 +84,56 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin: 18px auto;
+}
+
+
+#main-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+#latest-foods-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .article {
+    width: 48%;
+    float: left;
+    overflow: hidden;
+    margin: 0 0 50px;
+    margin-right: 0px;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+
+  .fork {
+    display: block;
+    height: 8px;
+    background: url('../img/fork.png') center no-repeat;
+    background-size: auto;
+    background-size: auto 100%;
+  }
+}
+
+
+#sidebar {
+  width: 300px;
+  // margin-left: 20px;
+  white-space: normal;
+  padding: 0 20px;
+
+  #top-sidebar {
+    width: inherit;
+  }
+
+  img {
+    width: 100%;
+  }
 }
