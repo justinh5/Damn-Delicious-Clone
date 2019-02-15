@@ -1,5 +1,5 @@
 * {
-  border: 2px solid cyan;
+  // border: 2px solid cyan;
 }
 
 body {
@@ -65,4 +65,21 @@ body {
   li {
     display: inline-block;
   }
+}
+
+
+#featured-row {
+  display: flex;
+
+  .featured-img {
+    margin: 0 6px;
+  }
+}
+
+.sign-up-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 18px auto;
 }
