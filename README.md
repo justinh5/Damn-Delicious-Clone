@@ -14,7 +14,7 @@ Clone:
 To get a copy of the project up and running on your local machine, run this command and open the index.html file:
 
 ```
-git clone https://github.com/justinhaupt/Damn-Delicious-Clone.git
+git clone https://github.com/justinh5/Damn-Delicious-Clone.git
 ```
 
 ### Requirements
