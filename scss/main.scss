@@ -26,7 +26,7 @@ body {
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1100px;
 }
 
 #header-container {
@@ -49,6 +49,9 @@ body {
   ul {
     display: flex;
     justify-content: space-between;
+    li {
+      display: inline-block;
+    }
   }
   a {
     @include header-font;
@@ -69,8 +72,9 @@ body {
 #nav-top {
   display: flex;
   justify-content: flex-end;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin-top: 20px;
+  max-width: 100%;
 
   .icon {
     color: white;
@@ -89,39 +93,29 @@ body {
     }
   }
 
+  #header-search {
+    position: relative;
+  }
+
   input {
-    height: $input-height;
-    // width: calc(100% - 44px);
+    @include search-box;
     margin-left: 20px;
-    padding: 0 12px;
-    color: $light-gray;
-    font-family: inherit;
-    font-style: italic;
-    font-size: 13px;
-    border: 1px solid $lighter-gray;
+    width: 20em;
     border-right: none;
-    vertical-align: middle;
-    border-right-style: none;
-    border-right-width: medium;
   }
 
   button {
+    position:absolute;
+    top: 0;
+    right: 0;
+    font-size: inherit;
     height: $input-height;
-    padding-left: 0;
     background-color: inherit;
     border: 1px solid $lighter-gray;
     border-left: none;
     cursor: pointer;
   }
 }
-
-
-#nav-menu-items {
-  li {
-    display: inline-block;
-  }
-}
-
 
 #featured-row {
   display: flex;
@@ -137,6 +131,36 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin: 18px auto;
+  letter-spacing: .15em;
+  font-size: 10px;
+
+  h3 {
+    @include header-font;
+    height: 52px;
+    line-height: 52px;
+  }
+
+  em {
+    width: 180px;
+    height: 52px;
+    padding: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  input {
+    @include search-box;
+    width: 20%;
+    display: inline-block;
+    font-family: inherit;
+    margin: 0 5px;
+  }
+
+  button {
+    @include header-font;
+    background-color: transparent;
+    border: none;
+  }
 }
 
 
@@ -152,26 +176,43 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 
-  .article {
-    width: 48%;
-    float: left;
-    overflow: hidden;
-    margin: 0 0 50px;
-    margin-right: 0px;
-    text-align: center;
-
-    img {
-      width: 100%;
-    }
-  }
-
-
   .fork {
     display: block;
     height: 8px;
     background: url('../img/fork.png') center no-repeat;
     background-size: auto;
     background-size: auto 100%;
+  }
+}
+
+.article {
+  width: 48%;
+  float: left;
+  overflow: hidden;
+  margin: 0 0 50px;
+  margin-right: 0px;
+  text-align: center;
+
+  .article-title-link {
+    @include header-font;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 10px solid $light-gray;
+      transition: 0.2s;
+    }
+  }
+
+  .continue-reading {
+    img {
+      width: 175px;
+      height: 45px;
+    }
+  }
+
+  img {
+    width: 100%;
   }
 }
 

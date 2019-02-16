@@ -15,7 +15,7 @@ body {
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1140px; }
+  max-width: 1100px; }
 
 #header-container {
   display: flex;
@@ -31,6 +31,8 @@ body {
   #nav-container ul {
     display: flex;
     justify-content: space-between; }
+    #nav-container ul li {
+      display: inline-block; }
   #nav-container a {
     font-family: 'Montserrat', sans-serif;
     color: black;
@@ -47,8 +49,9 @@ body {
 #nav-top {
   display: flex;
   justify-content: flex-end;
-  flex-wrap: nowrap;
-  margin-top: 20px; }
+  flex-wrap: wrap;
+  margin-top: 20px;
+  max-width: 100%; }
   #nav-top .icon {
     color: white;
     background-color: black;
@@ -62,29 +65,30 @@ body {
     #nav-top .icon:hover {
       opacity: 0.5;
       transition: 0.3s; }
+  #nav-top #header-search {
+    position: relative; }
   #nav-top input {
     height: 44px;
-    margin-left: 20px;
     padding: 0 12px;
     color: #bcbcbc;
     font-family: inherit;
     font-style: italic;
     font-size: 13px;
     border: 1px solid #e0e0e0;
-    border-right: none;
     vertical-align: middle;
-    border-right-style: none;
-    border-right-width: medium; }
+    margin-left: 20px;
+    width: 20em;
+    border-right: none; }
   #nav-top button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: inherit;
     height: 44px;
-    padding-left: 0;
     background-color: inherit;
     border: 1px solid #e0e0e0;
     border-left: none;
     cursor: pointer; }
-
-#nav-menu-items li {
-  display: inline-block; }
 
 #featured-row {
   display: flex; }
@@ -96,7 +100,42 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 18px auto; }
+  margin: 18px auto;
+  letter-spacing: .15em;
+  font-size: 10px; }
+  .sign-up-row h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    height: 52px;
+    line-height: 52px; }
+  .sign-up-row em {
+    width: 180px;
+    height: 52px;
+    padding: 0 8px;
+    display: inline-block;
+    vertical-align: middle; }
+  .sign-up-row input {
+    height: 44px;
+    padding: 0 12px;
+    color: #bcbcbc;
+    font-family: inherit;
+    font-style: italic;
+    font-size: 13px;
+    border: 1px solid #e0e0e0;
+    vertical-align: middle;
+    width: 20%;
+    display: inline-block;
+    font-family: inherit;
+    margin: 0 5px; }
+  .sign-up-row button {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border: none; }
 
 #main-inner {
   display: flex;
@@ -107,21 +146,35 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
-  #latest-foods-top .article {
-    width: 48%;
-    float: left;
-    overflow: hidden;
-    margin: 0 0 50px;
-    margin-right: 0px;
-    text-align: center; }
-    #latest-foods-top .article img {
-      width: 100%; }
   #latest-foods-top .fork {
     display: block;
     height: 8px;
     background: url("../img/fork.png") center no-repeat;
     background-size: auto;
     background-size: auto 100%; }
+
+.article {
+  width: 48%;
+  float: left;
+  overflow: hidden;
+  margin: 0 0 50px;
+  margin-right: 0px;
+  text-align: center; }
+  .article .article-title-link {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 20px;
+    cursor: pointer; }
+    .article .article-title-link:hover {
+      border-bottom: 10px solid #bcbcbc;
+      transition: 0.2s; }
+  .article .continue-reading img {
+    width: 175px;
+    height: 45px; }
+  .article img {
+    width: 100%; }
 
 #sidebar {
   width: 300px;
