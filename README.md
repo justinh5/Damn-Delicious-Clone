@@ -1,26 +1,10 @@
 # Damn Delicious Clone
 
 A clone of the food blog [Damn Delicious](https://damndelicious.net/).
-This is a styling exercise.
+This is a styling exercise with SASS.
 
-Original:
+**Original**
 ![Homepage screenshot](original.png)
 
-Clone:
+**Clone**
 ![Homepage screenshot](clone.png)
-
-## Getting Started
-
-To get a copy of the project up and running on your local machine, run this command and open the index.html file:
-
-```
-git clone https://github.com/justinhaupt/Damn-Delicious-Clone.git
-```
-
-### Requirements
-
-Chrome, Firefox, IE, Safari
-
-## Author
-
-**Justin Haupt** - *Initial work*
