@@ -4,7 +4,8 @@
 
 
 * {
-  // border: 2px solid cyan;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,8 +14,6 @@ body {
   position: relative;
   line-height: 1.7;
   color: $charcoal;
-  margin: 0;
-  padding: 0;
 }
 
 #container {
@@ -58,8 +57,7 @@ body {
     padding: 12px;
 
     &:hover {
-      border-bottom: 5px solid lightgray;
-      transition: 0.3s;
+      @include nav-hover-effect(5px);
     }
   }
 
@@ -107,6 +105,7 @@ body {
     position:absolute;
     top: 0;
     right: 0;
+    padding-right: 10px;
     font-size: inherit;
     height: $input-height;
     background-color: inherit;
@@ -178,7 +177,7 @@ body {
   .fork {
     display: block;
     height: 8px;
-    margin: 10px;
+    margin: 15px;
     background: url('../img/fork.png') center no-repeat;
     background-size: auto;
     background-size: auto 100%;
@@ -195,7 +194,7 @@ body {
 
   .article-date {
     @include header-font;
-    color: #aeaeae;
+    color: $light-gray;
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
@@ -209,8 +208,7 @@ body {
     cursor: pointer;
 
     &:hover {
-      border-bottom: 10px solid $light-gray;
-      transition: 0.2s;
+      @include nav-hover-effect(10px);
     }
   }
 
@@ -218,6 +216,11 @@ body {
     img {
       width: 175px;
       height: 45px;
+      margin-top: 15px;
+
+      &:hover {
+        @include more-hover-effect;
+      }
     }
   }
 
@@ -230,10 +233,77 @@ body {
 #sidebar {
   width: 300px;
   white-space: normal;
-  padding: 0 20px;
+  padding: 0 0 0 40px;
 
   #top-sidebar {
     width: inherit;
+  }
+
+  .cookbook-sidebar {
+    width: inherit;
+    margin-top: 40px;
+
+    .shop-row {
+      @include header-font;
+      letter-spacing: 1px;
+      color: $light-gray;
+
+      p {
+        font-size: 10px;
+      }
+
+      a {
+        color: black;
+        font-size: 10px;
+        text-decoration: none;
+
+        &:hover {
+          @include more-hover-effect;
+        }
+      }
+    }
+  }
+
+  // p {
+  //   font-size: 15px;
+  //   padding: 0 10px;
+  // }
+
+  #more-about {
+    width: 140px;
+
+    &:hover {
+      @include more-hover-effect;
+    }
+  }
+
+  #search-recipes {
+
+    margin-top: 50px;
+
+    p {
+      @include header-font;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    input {
+      @include search-box;
+      width: 86%;
+      border-right: none;
+      float: left;
+    }
+
+    button {
+      padding-right: 10px;
+      float: left;
+      font-size: inherit;
+      height: $input-height;
+      background-color: inherit;
+      border: 1px solid $lighter-gray;
+      border-left: none;
+      cursor: pointer;
+    }
   }
 
   img {

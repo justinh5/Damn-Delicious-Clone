@@ -1,11 +1,13 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: Georgia,times new roman,Times,serif;
   text-align: center;
   position: relative;
   line-height: 1.7;
-  color: #595959;
-  margin: 0;
-  padding: 0; }
+  color: #595959; }
 
 #container {
   max-width: 100%;
@@ -42,7 +44,8 @@ body {
     padding: 12px; }
     #nav-container a:hover {
       border-bottom: 5px solid lightgray;
-      transition: 0.3s; }
+      transition: 0.3s;
+      cursor: pointer; }
   #nav-container nav {
     padding-top: 20px; }
 
@@ -83,6 +86,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    padding-right: 10px;
     font-size: inherit;
     height: 44px;
     background-color: inherit;
@@ -149,7 +153,7 @@ body {
   #latest-foods-top .fork {
     display: block;
     height: 8px;
-    margin: 10px;
+    margin: 15px;
     background: url("../img/fork.png") center no-repeat;
     background-size: auto;
     background-size: auto 100%; }
@@ -166,7 +170,7 @@ body {
     color: black;
     text-decoration: none;
     letter-spacing: 2px;
-    color: #aeaeae;
+    color: #bcbcbc;
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
@@ -180,20 +184,82 @@ body {
     font-size: 20px;
     cursor: pointer; }
     .article .article-title-link:hover {
-      border-bottom: 10px solid #bcbcbc;
-      transition: 0.2s; }
+      border-bottom: 10px solid lightgray;
+      transition: 0.3s;
+      cursor: pointer; }
   .article .continue-reading img {
     width: 175px;
-    height: 45px; }
+    height: 45px;
+    margin-top: 15px; }
+    .article .continue-reading img:hover {
+      opacity: 0.7;
+      transition: 0.2s;
+      cursor: pointer; }
   .article img {
     width: 100%; }
 
 #sidebar {
   width: 300px;
   white-space: normal;
-  padding: 0 20px; }
+  padding: 0 0 0 40px; }
   #sidebar #top-sidebar {
     width: inherit; }
+  #sidebar .cookbook-sidebar {
+    width: inherit;
+    margin-top: 40px; }
+    #sidebar .cookbook-sidebar .shop-row {
+      font-family: 'Montserrat', sans-serif;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 2px;
+      letter-spacing: 1px;
+      color: #bcbcbc; }
+      #sidebar .cookbook-sidebar .shop-row p {
+        font-size: 10px; }
+      #sidebar .cookbook-sidebar .shop-row a {
+        color: black;
+        font-size: 10px;
+        text-decoration: none; }
+        #sidebar .cookbook-sidebar .shop-row a:hover {
+          opacity: 0.7;
+          transition: 0.2s;
+          cursor: pointer; }
+  #sidebar #more-about {
+    width: 140px; }
+    #sidebar #more-about:hover {
+      opacity: 0.7;
+      transition: 0.2s;
+      cursor: pointer; }
+  #sidebar #search-recipes {
+    margin-top: 50px; }
+    #sidebar #search-recipes p {
+      font-family: 'Montserrat', sans-serif;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 2px;
+      font-size: 15px;
+      margin-bottom: 8px; }
+    #sidebar #search-recipes input {
+      height: 44px;
+      padding: 0 12px;
+      color: #bcbcbc;
+      font-family: inherit;
+      font-style: italic;
+      font-size: 13px;
+      border: 1px solid #e0e0e0;
+      vertical-align: middle;
+      width: 86%;
+      border-right: none;
+      float: left; }
+    #sidebar #search-recipes button {
+      padding-right: 10px;
+      float: left;
+      font-size: inherit;
+      height: 44px;
+      background-color: inherit;
+      border: 1px solid #e0e0e0;
+      border-left: none;
+      cursor: pointer; }
   #sidebar img {
     width: 100%; }
 
