@@ -431,4 +431,12 @@ body {
   .sign-up-row {
     margin: 0 0 12px 0;
   }
+
+  #latest-foods-top {
+    flex-direction: column;
+    align-items: center;
+    .article {
+      width: 100%;
+    }
+  }
 }
