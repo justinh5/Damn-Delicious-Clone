@@ -12,3 +12,9 @@ Preview [here](https://justinh5.github.io/Damn-Delicious-Clone/).
 
 **Clone**
 ![Homepage screenshot](clone.png)
+
+**Original Mobile**
+![Homepage screenshot](original-mobile.png)
+
+**Clone Mobile**
+![Homepage screenshot](clone-mobile.png)
