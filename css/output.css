@@ -123,13 +123,18 @@ body {
   margin: 50px auto;
   letter-spacing: .15em;
   font-size: 10px; }
+  .sign-up-row #signup-input {
+    display: flex;
+    justify-content: flex-start;
+    width: 40%; }
   .sign-up-row h3 {
     font-family: 'Montserrat', sans-serif;
     color: black;
     text-decoration: none;
     letter-spacing: 1.5px;
     height: 52px;
-    line-height: 52px; }
+    line-height: 52px;
+    word-wrap: normal; }
   .sign-up-row em {
     width: 180px;
     height: 52px;
@@ -145,8 +150,7 @@ body {
     font-size: 13px;
     border: 1px solid #e0e0e0;
     vertical-align: middle;
-    width: 20%;
-    display: inline-block;
+    width: 70%;
     font-family: inherit;
     margin: 0 5px; }
   .sign-up-row button {
@@ -155,7 +159,8 @@ body {
     text-decoration: none;
     letter-spacing: 1.5px;
     background-color: transparent;
-    border: none; }
+    border: none;
+    flex-shrink: 0; }
 
 #main-inner {
   display: flex;
@@ -300,6 +305,33 @@ body {
 
   #main-inner {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+
+  #signup-input {
+    display: relative;
+    width: 100%;
+    flex-grow: 10; }
+    #signup-input input {
+      width: 100%; }
+    #signup-input button {
+      position: absolute;
+      line-height: 44px;
+      right: 4%; } }
+@media screen and (max-width: 725px) {
+  .sign-up-row h3 {
+    font-size: 11px;
+    line-height: normal;
+    height: auto; }
+  .sign-up-row em {
+    width: 100px;
+    height: 35px; }
+    .sign-up-row em img {
+      width: 100%; } }
+@media screen and (max-width: 530px) {
+  #featured-container {
+    display: none; }
+
+  .sign-up-row {
+    margin: 0 0 12px 0; } }
 
 /*# sourceMappingURL=output.css.map */

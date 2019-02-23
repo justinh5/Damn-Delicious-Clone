@@ -154,10 +154,17 @@ body {
   letter-spacing: .15em;
   font-size: 10px;
 
+  #signup-input {
+    display: flex;
+    justify-content: flex-start;
+    width: 40%;
+  }
+
   h3 {
     @include header-font;
     height: 52px;
     line-height: 52px;
+    word-wrap: normal;
   }
 
   em {
@@ -170,8 +177,7 @@ body {
 
   input {
     @include search-box;
-    width: 20%;
-    display: inline-block;
+    width: 70%;
     font-family: inherit;
     margin: 0 5px;
   }
@@ -180,6 +186,7 @@ body {
     @include header-font;
     background-color: transparent;
     border: none;
+    flex-shrink: 0;
   }
 }
 
@@ -377,5 +384,51 @@ body {
   #main-inner {
     flex-direction: column;
     align-items: center;
+  }
+
+  #signup-input {
+    display: relative;
+    width: 100%;
+    flex-grow: 10;
+    input {
+      width: 100%;
+    }
+
+    button {
+      position: absolute;
+      line-height: $input-height;
+      right: 4%;
+    }
+  }
+}
+
+@media screen and (max-width: 725px) {
+
+  .sign-up-row {
+
+    h3 {
+      font-size: 11px;
+      line-height: normal;
+      height: auto;
+    }
+
+    em {
+      width: 100px;
+      height: 35px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+
+  #featured-container {
+    display: none;
+  }
+
+  .sign-up-row {
+    margin: 0 0 12px 0;
   }
 }
